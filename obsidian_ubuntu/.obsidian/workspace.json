@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "db5fd236603a6f2e",
+    "type": "split",
+    "children": [
+      {
+        "id": "0921190a083e4e4a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "301d4de65e34d2f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "扫盲点/2026年 04月24日11点04疑难问题.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026年 04月24日11点04疑难问题"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7c862b962105d250",
+    "type": "split",
+    "children": [
+      {
+        "id": "b025f5e8a64a23e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e1c09a0514cde439",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "3d72c4954fd48070",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "0f3af8a31410a16f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 299.51103591918945
+  },
+  "right": {
+    "id": "f481b2938ae7e397",
+    "type": "split",
+    "children": [
+      {
+        "id": "2584ee8b81e840d2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1cdce83cd70846b6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "扫盲点/2026年 04月24日11点04疑难问题.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2026年 04月24日11点04疑难问题 的反向链接列表"
+            }
+          },
+          {
+            "id": "773cb524d1f341d0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "扫盲点/2026年 04月24日11点04疑难问题.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2026年 04月24日11点04疑难问题 的出链列表"
+            }
+          },
+          {
+            "id": "7e96dc0e26335a37",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "d7552e06da9d3516",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "0e7b6d7a38894f26",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "扫盲点/2026年 04月24日11点04疑难问题.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2026年 04月24日11点04疑难问题 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "zk-prefixer:创建时间戳笔记": false
+    }
+  },
+  "active": "301d4de65e34d2f0",
+  "lastOpenFiles": [
+    "扫盲点/2026年 04月24日16点04关于客番番的业务提问.md",
+    "Fastlearn/操作系统内存分配与分类/01-知识地图.md",
+    "Fastlearn/操作系统内存分配与分类/02-核心笔记.md",
+    "Fastlearn/操作系统内存分配与分类/03-面试题库.md",
+    "Fastlearn/操作系统内存分配与分类/06-模拟面试.md",
+    "Fastlearn/操作系统内存分配与分类/05-错题与漏洞.md",
+    "Fastlearn/操作系统内存分配与分类/04-练习与实验.md",
+    "Fastlearn/操作系统内存分配与分类/00-首页.md",
+    "扫盲点/2026年 04月24日11点04疑难问题.md",
+    "扫盲点/未命名.md",
+    "扫盲点/2026年 04月24日10点04内核态用户态.md",
+    "Fastlearn/操作系统内存分配与分类",
+    "Fastlearn",
+    "202604240934进程间通信IPC.md",
+    "202604241019内核态用户态.md",
+    "欢迎.md",
+    "2026-04-24.md",
+    "扫盲点"
+  ]
+}
