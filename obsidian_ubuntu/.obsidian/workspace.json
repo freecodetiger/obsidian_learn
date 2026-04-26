@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "扫盲点/2026年 04月26日16点04虚拟内存.md",
+                "file": "扫盲点/202604240934进程间通信IPC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026年 04月26日16点04虚拟内存"
+              "title": "202604240934进程间通信IPC"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.51103591918945
+    "width": 237.5086555480957
   },
   "right": {
     "id": "f481b2938ae7e397",
@@ -184,10 +184,19 @@
       "zk-prefixer:创建时间戳笔记": false
     }
   },
-  "active": "301d4de65e34d2f0",
+  "active": "e1c09a0514cde439",
   "lastOpenFiles": [
-    "202604240934进程间通信IPC.md",
+    "扫盲点/2026年 04月26日22点04关于内核和内核空间.md",
     "扫盲点/2026年 04月26日16点04虚拟内存.md",
+    "Fastlearn/虚拟内存/06-模拟面试.md",
+    "Fastlearn/虚拟内存/05-错题与漏洞.md",
+    "Fastlearn/虚拟内存/04-练习与实验.md",
+    "Fastlearn/虚拟内存/03-面试题库.md",
+    "Fastlearn/虚拟内存/02-核心笔记.md",
+    "Fastlearn/虚拟内存/01-知识地图.md",
+    "Fastlearn/虚拟内存/00-首页.md",
+    "Fastlearn/虚拟内存",
+    "扫盲点/202604240934进程间通信IPC.md",
     "扫盲点/2026年 04月24日11点04疑难问题.md",
     "扫盲点/2026年 04月24日16点04关于客番番的业务提问.md",
     "扫盲点/2026年 04月25日15点04华为笔试两道题.md",
