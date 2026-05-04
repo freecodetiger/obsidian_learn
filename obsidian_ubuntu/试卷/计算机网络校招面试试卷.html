@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>计算机网络校招面试试卷</title>
+  <style>
+    :root {
+      --ink: #111;
+      --muted: #666;
+      --line: #c9c9c9;
+      --soft: #f3f3f3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #e8e8e8;
+      font-family: "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 16px auto;
+      padding: 18mm 17mm;
+      background: #fff;
+      box-shadow: 0 3px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 88px;
+      border-bottom: 1px solid var(--ink);
+      height: 1.2em;
+      vertical-align: -2px;
+    }
+
+    .notice {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 10px 12px;
+      font-size: 14px;
+      margin: 14px 0 20px;
+    }
+
+    h2 {
+      margin: 24px 0 10px;
+      padding: 6px 10px;
+      border-left: 5px solid var(--ink);
+      background: var(--soft);
+      font-size: 18px;
+    }
+
+    .section-note {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    ol {
+      padding-left: 26px;
+      margin: 0;
+    }
+
+    li {
+      margin: 0 0 14px;
+      break-inside: avoid;
+    }
+
+    .question-title {
+      font-weight: 700;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 18px;
+      margin: 6px 0 0;
+      font-size: 15px;
+    }
+
+    .answer-line {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    .write-area {
+      height: 118px;
+      margin-top: 8px;
+      background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 29px, var(--line) 30px);
+      border: 1px solid var(--line);
+    }
+
+    .write-area.large {
+      height: 210px;
+    }
+
+    .page-break {
+      break-before: page;
+    }
+
+    footer {
+      margin-top: 24px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 14mm 14mm;
+        box-shadow: none;
+      }
+
+      h2 {
+        break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>计算机网络校招面试试卷</h1>
+      <div>总分：100 分　建议用时：90-120 分钟　题型：选择题、简答题、综合面试场景题</div>
+      <div class="meta">
+        <div>姓名：<span class="blank"></span></div>
+        <div>日期：<span class="blank"></span></div>
+        <div>得分：<span class="blank"></span></div>
+        <div>批阅人：<span class="blank"></span></div>
+      </div>
+    </header>
+
+    <section class="notice">
+      <strong>说明：</strong>本试卷基于 Obsidian 计算机网络笔记生成，范围集中在 TCP/IP 模型、TCP/UDP、HTTP 演进、HTTPS/TLS、QUIC、代理等校招面试高频内容，不包含防火墙规避相关问题。选择题为单选题。
+    </section>
+
+    <h2>一、选择题（共 20 题，每题 2 分，共 40 分）</h2>
+    <p class="section-note">请从 A、B、C、D 中选择一个最符合题意的答案。</p>
+    <ol>
+      <li>
+        <div class="question-title">TCP/IP 四层模型从上到下的顺序是：</div>
+        <div class="options">
+          <div>A. 应用层、传输层、网络层、网络接口层</div>
+          <div>B. 应用层、网络层、传输层、网络接口层</div>
+          <div>C. 表示层、会话层、传输层、物理层</div>
+          <div>D. 传输层、应用层、网络层、数据链路层</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">端口号主要由哪一层用来把数据交给正确的进程？</div>
+        <div class="options">
+          <div>A. 应用层</div>
+          <div>B. 传输层</div>
+          <div>C. 网络层</div>
+          <div>D. 网络接口层</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">IP 协议的核心职责最准确的是：</div>
+        <div class="options">
+          <div>A. 保证数据可靠、有序到达</div>
+          <div>B. 根据地址和路由把数据包送往目标主机</div>
+          <div>C. 给 HTTP 请求增加 Cookie</div>
+          <div>D. 在同一进程内复制数据</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">MAC 地址主要用于：</div>
+        <div class="options">
+          <div>A. 同一局域网内的数据帧转发</div>
+          <div>B. 标识一个 HTTP 请求</div>
+          <div>C. 标识一个进程的端口</div>
+          <div>D. 加密 HTTPS 证书</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">关于 TCP 序列号，下列说法正确的是：</div>
+        <div class="options">
+          <div>A. 它是数据包的自然编号</div>
+          <div>B. 它是字节流中每个字节的编号</div>
+          <div>C. 它只在 UDP 中使用</div>
+          <div>D. 它只用于加密</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">TCP 确认应答号 ACK=101 通常表示：</div>
+        <div class="options">
+          <div>A. 已收到编号 101 之后的所有字节</div>
+          <div>B. 只收到了第 101 个数据包</div>
+          <div>C. 期望下一个收到的字节序号是 101</div>
+          <div>D. 本连接端口号是 101</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">TCP 的可靠性主要依赖哪些机制？</div>
+        <div class="options">
+          <div>A. 序列号、确认应答、重传、流量控制等</div>
+          <div>B. MAC 地址、ARP、DNS 缓存</div>
+          <div>C. 只依赖三次握手</div>
+          <div>D. 只依赖 HTTP 状态码</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">快速重传通常由什么现象触发？</div>
+        <div class="options">
+          <div>A. 客户端收到 3 次重复 ACK</div>
+          <div>B. 服务端收到 FIN</div>
+          <div>C. 浏览器缓存命中</div>
+          <div>D. DNS 解析失败</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">为什么重复 ACK 通常不是 1 次就触发重传？</div>
+        <div class="options">
+          <div>A. 因为 TCP 不允许重传</div>
+          <div>B. 因为少量重复 ACK 可能只是网络乱序造成的</div>
+          <div>C. 因为 ACK 只能由路由器发送</div>
+          <div>D. 因为 UDP 会自动修复丢包</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">TCP 三次握手最核心的作用不包括：</div>
+        <div class="options">
+          <div>A. 同步双方初始序列号</div>
+          <div>B. 防止历史连接被错误初始化</div>
+          <div>C. 协商窗口大小等连接信息</div>
+          <div>D. 加密 HTTP 请求正文</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">如果 TCP 只有两次握手，最容易带来的问题是：</div>
+        <div class="options">
+          <div>A. 服务端可能为历史 SYN 或无效 SYN 过早分配完整连接资源</div>
+          <div>B. 客户端不能发送任何字节</div>
+          <div>C. IP 地址无法寻址</div>
+          <div>D. 浏览器不能解析 HTML</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">UDP 相比 TCP 的典型特点是：</div>
+        <div class="options">
+          <div>A. 面向连接、可靠、有序</div>
+          <div>B. 无连接、首部开销小、不保证可靠</div>
+          <div>C. 必须经过三次握手</div>
+          <div>D. 不支持一对多通信</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">“TCP 是字节流协议”导致应用层常要解决的问题是：</div>
+        <div class="options">
+          <div>A. 粘包/消息边界问题</div>
+          <div>B. 域名过期问题</div>
+          <div>C. 浏览器渲染阻塞问题</div>
+          <div>D. 证书链验证问题</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">HTTPS 可以概括为：</div>
+        <div class="options">
+          <div>A. HTTP + TLS</div>
+          <div>B. TCP + UDP</div>
+          <div>C. IP + ARP</div>
+          <div>D. HTML + CSS</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">数字证书最核心的作用是：</div>
+        <div class="options">
+          <div>A. 让客户端验证服务器公钥确实属于目标域名</div>
+          <div>B. 让服务器隐藏自己的 IP 地址</div>
+          <div>C. 让 TCP 不再需要重传</div>
+          <div>D. 让 HTTP 状态码变成二进制</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">关于数字签名，正确说法是：</div>
+        <div class="options">
+          <div>A. 用私钥签名，客户端用对应公钥验签</div>
+          <div>B. 用公钥签名，任何私钥都能验签</div>
+          <div>C. 签名等价于压缩</div>
+          <div>D. 签名只保证传输速度</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">现代 TLS 中，ECDHE 的重要价值是：</div>
+        <div class="options">
+          <div>A. 使用临时密钥协商会话密钥，提供前向安全性</div>
+          <div>B. 删除证书验证流程</div>
+          <div>C. 让 HTTP/1.0 支持服务器推送</div>
+          <div>D. 让 UDP 变成 TCP</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">HTTP/1.1 相比 HTTP/1.0 的重要改进是：</div>
+        <div class="options">
+          <div>A. 默认支持长连接</div>
+          <div>B. 改用 UDP</div>
+          <div>C. 强制内置 TLS 1.3</div>
+          <div>D. 删除 Host 头</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">HTTP/2 主要解决了哪一层面的队头阻塞？</div>
+        <div class="options">
+          <div>A. HTTP 应用层队头阻塞</div>
+          <div>B. TCP 传输层队头阻塞</div>
+          <div>C. 物理层信号阻塞</div>
+          <div>D. DNS 查询阻塞</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">HTTP/3 选择 QUIC 的关键原因之一是：</div>
+        <div class="options">
+          <div>A. QUIC 基于 UDP 实现多路复用，某个流丢包不阻塞其他流</div>
+          <div>B. QUIC 删除了所有加密逻辑</div>
+          <div>C. QUIC 只能在局域网使用</div>
+          <div>D. QUIC 不需要任何确认机制</div>
+        </div>
+        <div class="answer-line">答案：______</div>
+      </li>
+    </ol>
+
+    <h2 class="page-break">二、简答题（共 8 题，每题 5 分，共 40 分）</h2>
+    <p class="section-note">请写出关键概念、原因和面试表达要点。</p>
+    <ol>
+      <li>
+        <div class="question-title">简述 TCP/IP 四层模型中各层的职责，并举出每层的典型协议或概念。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">为什么说 TCP 是可靠传输协议？请至少从序列号、ACK、重传、有序性三个角度说明。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">解释 TCP 三次握手为什么不是两次握手。请结合历史连接、序列号同步和资源浪费说明。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">什么是 TCP 粘包问题？应用层通常如何解决消息边界问题？</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">对比 TCP 和 UDP 的核心差异，并说明为什么 QUIC 可以基于 UDP 实现可靠传输。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">HTTPS 如何同时解决身份认证、机密性和完整性？请说明证书、密钥协商和对称加密各自的作用。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">HTTP/1.1、HTTP/2、HTTP/3 在连接复用、队头阻塞和传输层协议上的主要区别是什么？</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">解释正向代理和反向代理的区别，并分别说明隐藏的是哪一端。</div>
+        <div class="write-area"></div>
+      </li>
+    </ol>
+
+    <h2 class="page-break">三、综合面试场景题（共 2 题，每题 10 分，共 20 分）</h2>
+    <p class="section-note">请按真实面试回答组织：先给结论，再分层分析，最后补充优化方案和风险点。</p>
+    <ol>
+      <li>
+        <div class="question-title">场景一：面试官问：“用户反馈 HTTPS 页面首次打开很慢，但后续刷新明显变快。你会从哪些网络层面分析？如果让你优化，你会怎么做？”</div>
+        <div class="write-area large"></div>
+      </li>
+      <li>
+        <div class="question-title">场景二：面试官问：“移动端 App 从 Wi-Fi 切到 5G 时，基于 HTTP/1.1 的长连接经常断开重连。为什么 HTTP/3/QUIC 对这种场景更友好？请结合连接标识、握手、队头阻塞说明。”</div>
+        <div class="write-area large"></div>
+      </li>
+    </ol>
+
+    <footer>本试卷为打印版。答案与解析请查看单独的答案解析 HTML 文件。</footer>
+  </main>
+</body>
+</html>

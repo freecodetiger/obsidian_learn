@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>操作系统校招面试试卷</title>
+  <style>
+    :root {
+      --ink: #111;
+      --muted: #666;
+      --line: #c8c8c8;
+      --soft: #f2f2f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #e9e9e9;
+      font-family: "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+      line-height: 1.64;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 16px auto;
+      padding: 18mm 17mm;
+      background: #fff;
+      box-shadow: 0 3px 18px rgba(0, 0, 0, .12);
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      letter-spacing: 0;
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+      font-size: 14px;
+      text-align: left;
+    }
+    .blank {
+      display: inline-block;
+      min-width: 88px;
+      border-bottom: 1px solid var(--ink);
+      height: 1.2em;
+      vertical-align: -2px;
+    }
+    .notice {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 10px 12px;
+      font-size: 14px;
+      margin: 14px 0 20px;
+    }
+    h2 {
+      margin: 24px 0 10px;
+      padding: 6px 10px;
+      border-left: 5px solid var(--ink);
+      background: var(--soft);
+      font-size: 18px;
+    }
+    .section-note {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    ol {
+      padding-left: 26px;
+      margin: 0;
+    }
+    li {
+      margin: 0 0 14px;
+      break-inside: avoid;
+    }
+    .question-title {
+      font-weight: 700;
+    }
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 18px;
+      margin: 6px 0 0;
+      font-size: 15px;
+    }
+    .answer-line {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+    .write-area {
+      height: 132px;
+      margin-top: 8px;
+      border: 1px solid var(--line);
+      background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 29px, var(--line) 30px);
+    }
+    .page-break { break-before: page; }
+    footer {
+      margin-top: 24px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 14mm 14mm;
+        box-shadow: none;
+      }
+      h2 { break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>操作系统校招面试试卷</h1>
+      <div>总分：100 分　建议用时：100-120 分钟　题型：选择题、简答题</div>
+      <div class="meta">
+        <div>姓名：<span class="blank"></span></div>
+        <div>日期：<span class="blank"></span></div>
+        <div>得分：<span class="blank"></span></div>
+        <div>批阅人：<span class="blank"></span></div>
+      </div>
+    </header>
+
+    <section class="notice">
+      <strong>说明：</strong>本试卷基于 Obsidian 操作系统笔记生成，并扩展常见校招偏难考点。重点覆盖虚拟内存、页表、TLB、缺页异常、进程线程、内核态/用户态、IPC、内存分配、同步互斥、死锁、调度和 Page Cache。
+    </section>
+
+    <h2>一、选择题（共 25 题，每题 2 分，共 50 分）</h2>
+    <p class="section-note">每题只有一个最符合题意的答案。</p>
+    <ol>
+      <li>
+        <div class="question-title">关于用户态和内核态，下列说法最准确的是：</div>
+        <div class="options"><div>A. 用户态可以直接访问所有物理内存</div><div>B. 内核态拥有更高权限，可访问硬件和内核数据结构</div><div>C. 系统调用不会发生权限切换</div><div>D. 用户态崩溃一定导致系统宕机</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">一次系统调用通常不包括：</div>
+        <div class="options"><div>A. 保存用户态现场</div><div>B. 从用户栈切换到内核栈</div><div>C. 内核检查参数合法性</div><div>D. 用户进程直接修改页表项完成调用</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">关于中断和异常，下列说法正确的是：</div>
+        <div class="options"><div>A. 缺页异常通常是同步异常</div><div>B. 键盘中断由当前指令非法访问触发</div><div>C. 所有中断都必须导致进程退出</div><div>D. 异常只能来自外设</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">进程上下文切换通常比线程上下文切换更重，重要原因之一是：</div>
+        <div class="options"><div>A. 进程切换可能涉及地址空间和 TLB 影响</div><div>B. 线程没有寄存器状态</div><div>C. 进程不需要调度器参与</div><div>D. 线程切换一定要刷新磁盘缓存</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">虚拟内存的核心目标不包括：</div>
+        <div class="options"><div>A. 提供进程隔离</div><div>B. 提供连续地址空间抽象</div><div>C. 支持按需分配和共享保护</div><div>D. 保证物理内存永远不会不足</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">虚拟地址通常可以拆成：</div>
+        <div class="options"><div>A. 进程号和线程号</div><div>B. 虚拟页号和页内偏移</div><div>C. 设备号和 inode 号</div><div>D. 用户态标志和内核态标志</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">页表项 PTE 通常最核心记录的是：</div>
+        <div class="options"><div>A. 目标物理页框号和权限控制位</div><div>B. 当前线程的全部寄存器</div><div>C. 文件系统目录树</div><div>D. CPU 调度时间片</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">TLB 命中时，下列说法正确的是：</div>
+        <div class="options"><div>A. 完全不需要权限检查</div><div>B. 返回的是虚拟页号到物理页框号及权限等翻译结果</div><div>C. 内核必须逐条指令参与地址翻译</div><div>D. 页内偏移会被重新随机生成</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">minor page fault 与 major page fault 的关键区别是：</div>
+        <div class="options"><div>A. minor 一定是非法访问</div><div>B. major 通常需要从磁盘或慢速存储读入数据</div><div>C. major 不需要陷入内核</div><div>D. minor 一定没有任何性能成本</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">访问未分配虚拟地址或用户态访问内核地址，常见结果是：</div>
+        <div class="options"><div>A. 内核向进程发送 SIGSEGV</div><div>B. 自动创建文件描述符</div><div>C. 触发 TCP 重传</div><div>D. 直接刷新 Page Cache</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">fork 后写时复制 COW 的核心思想是：</div>
+        <div class="options"><div>A. 父子进程永远共享所有页面且可同时写</div><div>B. 先共享只读物理页，写入时再复制新页</div><div>C. fork 时立即完整复制所有物理内存</div><div>D. 只复制 CPU 寄存器，不复制地址空间</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">mmap 的准确理解是：</div>
+        <div class="options"><div>A. 把用户态直接绑定到物理地址，绕过所有内核机制</div><div>B. 建立虚拟地址区间到文件、匿名对象或共享对象的映射</div><div>C. 只能用于网络通信</div><div>D. 必然立刻分配所有物理页</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">关于 malloc，下列说法正确的是：</div>
+        <div class="options"><div>A. 每次 malloc 都一定进入内核并分配物理页</div><div>B. 小块分配常先由用户态分配器缓存处理</div><div>C. malloc 返回的是物理地址</div><div>D. free 后内存一定立即归还操作系统</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">brk 和 mmap 在用户态内存分配中的常见差异是：</div>
+        <div class="options"><div>A. brk 扩展堆区，mmap 常用于大块或独立映射</div><div>B. brk 只能分配内核栈</div><div>C. mmap 不能映射文件</div><div>D. 二者都绕过页表</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">伙伴系统主要解决的是：</div>
+        <div class="options"><div>A. 页框级连续块的拆分与合并</div><div>B. Java 对象逃逸分析</div><div>C. HTTP 请求复用</div><div>D. 文件名到 inode 的查找</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">slab/slub 分配器更适合：</div>
+        <div class="options"><div>A. 频繁分配固定大小内核对象</div><div>B. 只处理用户态字符串拼接</div><div>C. 替代所有页表</div><div>D. 避免任何同步问题</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">内部碎片的典型例子是：</div>
+        <div class="options"><div>A. 申请 33B，却按 64B 桶分配，块内部有 31B 浪费</div><div>B. 空闲页总量够但拼不出连续 8 页</div><div>C. 线程等待锁导致阻塞</div><div>D. 页表被 TLB 缓存</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">外部碎片最可能导致的问题是：</div>
+        <div class="options"><div>A. 总空闲内存够，但连续大块分配失败</div><div>B. 用户态无法发起系统调用</div><div>C. TLB 命中率永远为 100%</div><div>D. 管道自动变成消息队列</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">共享内存作为 IPC 方式，最大的优势通常是：</div>
+        <div class="options"><div>A. 减少用户态缓冲区之间的数据拷贝</div><div>B. 自动提供复杂业务协议</div><div>C. 不需要任何同步机制</div><div>D. 只能用于父子进程</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">共享内存通常必须配合信号量、互斥锁或 futex，是因为：</div>
+        <div class="options"><div>A. 共享内存本身不解决并发读写顺序和竞态</div><div>B. 共享内存不能存储数据</div><div>C. 共享内存只能跨机器使用</div><div>D. 信号量负责传输大块业务数据</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">Unix Domain Socket 相比 TCP loopback 的典型特点是：</div>
+        <div class="options"><div>A. 本机 IPC 更轻量，并可支持传递文件描述符</div><div>B. 必须经过公网路由器</div><div>C. 是浏览器 WebSocket 的同义词</div><div>D. 不能用于同一台机器</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">死锁产生的四个必要条件不包括：</div>
+        <div class="options"><div>A. 互斥</div><div>B. 持有并等待</div><div>C. 不可剥夺</div><div>D. 所有线程都处于运行态</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">避免死锁的常见方法之一是：</div>
+        <div class="options"><div>A. 破坏循环等待，例如统一加锁顺序</div><div>B. 增加无限数量的锁</div><div>C. 禁止所有线程阻塞但不改变锁顺序</div><div>D. 删除所有页表</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">Page Cache 的主要作用是：</div>
+        <div class="options"><div>A. 缓存文件页，减少磁盘 I/O</div><div>B. 缓存 TCP 三次握手状态</div><div>C. 保存所有 CPU 寄存器</div><div>D. 替代进程虚拟地址空间</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+      <li>
+        <div class="question-title">关于 OOM killer，下列说法更准确的是：</div>
+        <div class="options"><div>A. 它一定杀死 RSS 最大的进程</div><div>B. 它会综合 badness、内存策略、cgroup 等因素选择牺牲进程</div><div>C. 它只在 CPU 满载时触发</div><div>D. 它不会受内存 cgroup 限制影响</div></div>
+        <div class="answer-line">答案：______</div>
+      </li>
+    </ol>
+
+    <h2 class="page-break">二、简答题（共 10 题，每题 5 分，共 50 分）</h2>
+    <p class="section-note">请写出机制链路、边界条件和面试表达要点。</p>
+    <ol>
+      <li>
+        <div class="question-title">解释用户态、内核态和系统调用的关系。为什么频繁系统调用会带来性能开销？</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">从“虚拟地址、页表、MMU、TLB、物理地址”的角度说明一次内存访问如何完成。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">缺页异常有哪些类型？请区分 minor page fault、major page fault 和非法访问。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">请完整描述 `malloc` 到首次写入内存之间可能发生的链路，包括用户态分配器、brk/mmap、VMA、缺页和物理页分配。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">解释 fork 后写时复制 COW 的机制，以及它和页表权限位、缺页异常的关系。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">比较伙伴系统和 slab/slub 的职责边界。为什么内核小对象不适合每次都直接走伙伴系统？</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">比较管道、消息队列、共享内存、信号量、信号、Unix Domain Socket 的适用场景。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">为什么共享内存最快但不总是首选？请从拷贝次数、同步成本、调试难度和安全边界说明。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">说明死锁的四个必要条件，并给出至少三种破坏或避免死锁的方法。</div>
+        <div class="write-area"></div>
+      </li>
+      <li>
+        <div class="question-title">一个服务 RSS 很高，`free` 后系统可用内存没有明显上升。请从用户态分配器、Page Cache、slab、cgroup/OOM 等角度给出排查思路。</div>
+        <div class="write-area"></div>
+      </li>
+    </ol>
+
+    <footer>本试卷为打印版。答案与解析请查看单独的答案解析 HTML 文件。</footer>
+  </main>
+</body>
+</html>
